@@ -33,7 +33,7 @@ img {
 }
 .hero-img {
   height: 100%;
-  background-color: red;
+  background-color: var(--negro);
 }
 /* CONTENIDO MAIN */
 main {
