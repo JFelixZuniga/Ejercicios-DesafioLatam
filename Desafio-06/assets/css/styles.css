@@ -1,0 +1,47 @@
+:root {
+  --font-especial: "Lobster", cursive;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Utilidades */
+.line-height {
+  line-height: 1.7;
+}
+/* Nav y Hero section */
+.logo-ricomida {
+  font-family: var(--font-especial);
+}
+@media screen and (min-width: 768px) {
+  .border-text {
+    border-bottom: 1px solid #6c757d;
+    display: inline-block;
+  }
+}
+.hero {
+  margin-top: 90px;
+}
+.hero-title {
+  width: 290px;
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    width: 380px;
+    font-size: 40px;
+  }
+}
+.btn-hero .btn {
+  font-size: 14px;
+}
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+h4 {
+  color: black;
+}
+.texto-color {
+  color: red !important;
+  cursor: pointer;
+}
