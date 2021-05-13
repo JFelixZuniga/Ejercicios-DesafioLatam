@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafío 07 - Viajes Chile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Navegation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand align-items-center d-flex" href="#">
+          <img
+            src="assets/img/viajes.svg"
+            width="50"
+            alt="Logo de Suricata"
+          /><span class="h2 m-0 pl-2 font-weight-normal text-logo"
+            >Viajes Chile</span
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#about">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#places">Destacados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header" id="inicio">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="img-first"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="img-second"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="img-third"></div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="text-light bg-black" id="about">
+      <div class="container py-5">
+        <h3 class="text-center pb-3">¿Quiénes Somos?</h3>
+        <hr class="border-first" />
+        <div class="row px-2 pt-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <p
+              class="text-center color-first h3"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Preparamos tu viaje completamente"
+            >
+              <i class="fas fa-plane"></i>
+            </p>
+            <p>
+              Praesentium dolores incidunt, recusandae corrupti Lorem ipsum
+              dolor sit amet consectetur, adipisicing elit. Explicabo iure
+              possimus accusamus expedita consequuntur quo omnis tempora, enim
+              ipsam fugit asperiores deserunt amet alias mollitia odit velit
+              beatae, animi et. Possimus fugit, officiis quas quis aut itaque
+              consequuntur optio qui quam in eos reprehenderit inventore
+              reiciendis cupiditate aliquid animi molestias natus praesentium
+              dolores incidunt, recusandae corrupti provident aperiam nostrum.
+              Aperiam, omnis eaque veniam nobis maiores repellendus! Dicta fugit
+              incidunt excepturi maiores dolor nostrum doloremque.
+            </p>
+          </div>
+          <div
+            class="
+              col-12 col-md-6 col-lg-4
+              pt-md-0 pt-4
+              d-lg-block d-flex
+              flex-column
+            "
+          >
+            <p class="order-lg-3 order-2">
+              Tempora, enim ipsam fugit asperiores deserunt Lorem ipsum dolor
+              sit amet consectetur, adipisicing elit. Explicabo iure possimus
+              accusamus expedita consequuntur quo omnis tempora, enim ipsam
+              fugit asperiores deserunt amet alias mollitia odit velit beatae,
+              animi et. Possimus fugit, officiis quas quis aut itaque
+              consequuntur optio qui quam in eos reprehenderit inventore
+              reiciendis cupiditate aliquid animi molestias natus praesentium
+              dolores incidunt, recusandae corrupti provident aperiam nostrum.
+              Aperiam, omnis eaque veniam nobis maiores repellendus! Dicta fugit
+              incidunt excepturi maiores dolor nostrum doloremque.
+            </p>
+            <p
+              class="text-center color-first h3 order-lg-2 order-1"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="Seguro de salud incluido en todos nuestros viajes"
+            >
+              <i class="fas fa-mountain ml-3"></i>
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 m-md-auto pt-lg-0 pt-4">
+            <p
+              class="text-center color-first h3"
+              data-toggle="tooltip"
+              data-placement="left"
+              title="Rutas de viaje personalizadas a tu gusto"
+            >
+              <i class="fas fa-route ml-3"></i>
+            </p>
+            <p>
+              Aut itaque consequuntur optio qui quam in Lorem ipsum dolor sit
+              amet consectetur, adipisicing elit. Explicabo iure possimus
+              accusamus expedita consequuntur quo omnis tempora, enim ipsam
+              fugit asperiores deserunt amet alias mollitia odit velit beatae,
+              animi et. Possimus fugit, officiis quas quis aut itaque
+              consequuntur optio qui quam in eos reprehenderit inventore
+              reiciendis cupiditate aliquid animi molestias natus praesentium
+              dolores incidunt, recusandae corrupti provident aperiam nostrum.
+              Aperiam, omnis eaque veniam nobis maiores repellendus! Dicta fugit
+              incidunt excepturi maiores dolor nostrum doloremque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Places Section -->
+    <section class="text-light bg-black" id="places">
+      <div class="container py-5">
+        <h3 class="text-center pb-3">Destacados</h3>
+        <hr class="border-first" />
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 px-2 pt-4">
+          <div class="col mb-4">
+            <div class="card mx-auto h-100">
+              <img
+                src="./assets/img/card1.jpg"
+                class="card-img-top"
+                alt="Lugar exótico 1"
+              />
+              <div class="card-body color-first">
+                <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card mx-auto h-100">
+              <img
+                src="./assets/img/card2.jpg"
+                class="card-img-top"
+                alt="Lugar exótico 2"
+              />
+              <div class="card-body color-first">
+                <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card mx-auto h-100">
+              <img
+                src="./assets/img/card3.jpg"
+                class="card-img-top"
+                alt="Lugar exótico 3"
+              />
+              <div class="card-body color-first">
+                <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card mx-auto h-100">
+              <img
+                src="./assets/img/card4.jpg"
+                class="card-img-top"
+                alt="Lugar exótico 4"
+              />
+              <div class="card-body color-first">
+                <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-black" id="contact">
+      <div class="container py-5">
+        <h3 class="text-center pb-3 text-white">Contacto</h3>
+        <hr class="border-first" />
+        <div
+          class="typeform-widget pt-3 px-2"
+          data-url="https://form.typeform.com/to/IwlLDV0T?typeform-medium=embed-snippet"
+          style="width: 100%; height: 500px"
+        ></div>
+        <script>
+          (function () {
+            var qs,
+              js,
+              q,
+              s,
+              d = document,
+              gi = d.getElementById,
+              ce = d.createElement,
+              gt = d.getElementsByTagName,
+              id = "typef_orm",
+              b = "https://embed.typeform.com/";
+            if (!gi.call(d, id)) {
+              js = ce.call(d, "script");
+              js.id = id;
+              js.src = b + "embed.js";
+              q = gt.call(d, "script")[0];
+              q.parentNode.insertBefore(js, q);
+            }
+          })();
+        </script>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="color-first py-3 w-100">
+      <div
+        class="
+          container
+          d-md-flex
+          justify-content-around
+          align-items-center
+          text-white text-center
+        "
+      >
+        <p class="m-0 text-uppercase h1">Viajes Chile</p>
+        <div class="h1 m-0">
+          <a href="#" target="_blank" class="text-decoration-none text-white">
+            <i class="fab fa-github-square"></i>
+          </a>
+          <a href="#" target="_blank" class="text-decoration-none text-white">
+            <i class="fab fa-linkedin ml-2"></i>
+          </a>
+          <a href="#" target="_blank" class="text-decoration-none text-white">
+            <i class="fab fa-twitter-square ml-2"></i>
+          </a>
+          <a href="#" target="_blank" class="text-decoration-none text-white">
+            <i class="fab fa-facebook-square ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

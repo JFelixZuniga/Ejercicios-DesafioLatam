@@ -1,0 +1,37 @@
+:root {
+  --color-primary: #15aabf;
+  --bg-black: #000;
+}
+/* Utilidades */
+.color-first {
+  background-color: var(--color-primary);
+}
+.bg-black {
+  background-color: var(--bg-black);
+}
+hr.border-first {
+  background-color: var(--color-primary);
+}
+/* Header */
+@media screen and (max-width: 380px) {
+  .text-logo {
+    font-size: 28px;
+  }
+}
+.img-first,
+.img-second,
+.img-third {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.img-first {
+  background-image: url(../img/carousel1.jpg);
+}
+.img-second {
+  background-image: url(../img/carousel2.jpg);
+}
+.img-third {
+  background-image: url(../img/carousel3.jpg);
+}
