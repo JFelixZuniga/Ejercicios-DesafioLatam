@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 1</title>
+  </head>
+
+  <body>
+    <div>
+      <div style="width: 40%; margin: 0 auto">
+        <h2>Escríbenos !!!</h2>
+        <div class="resultado" style="color: green; font-style: italic"></div>
+        <form id="formulario">
+          <div>
+            <div style="display: flex; flex-direction: column">
+              <label> Nombre completo </label>
+              <input id="nombre" type="text" />
+              <p class="errorNombre" style="color: red; font-style: italic"></p>
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <label> Asunto </label>
+              <input id="asunto" type="text" />
+              <p class="errorAsunto" style="color: red; font-style: italic"></p>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column">
+            <label> Mensaje </label>
+            <textarea id="mensaje"></textarea>
+            <p class="errorMensaje" style="color: red; font-style: italic"></p>
+          </div>
+          <div>
+            <button id="botton" type="submit">Envíar mensaje</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      const formulario = document.querySelector("#formulario");
+      const nombreInput = document.querySelector("#nombre");
+      const asuntoInput = document.querySelector("#asunto");
+      const mensajeInput = document.querySelector("#mensaje");
+
+      formulario.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Caputamos los valores ingresados por los usuarios
+        const { value: nombre } = nombreInput;
+        const { value: asunto } = asuntoInput;
+        const { value: mensaje } = mensajeInput;
+
+        const resultado = validarDatos(nombre, asunto, mensaje);
+
+        if (resultado) {
+          limpiarErrores();
+          exito();
+        }
+      });
+
+      function validarDatos(nombre, asunto, mensaje) {
+        let datosValidados = true;
+        let validacionDatos = /[a-zA-Z]/gim;
+
+        // Validamos el nombre
+        if (validacionDatos.test(nombre) == false) {
+          document.querySelector(".errorNombre").innerHTML =
+            "Nombre es requerido";
+          datosValidados = false;
+        } else {
+          document.querySelector(".errorNombre").innerHTML =
+            "Nombre ingresado correctamente";
+          document.querySelector(".errorNombre").style.color = "green";
+        }
+
+        // Validamos el asunto
+        if (validacionDatos.test(asunto) == false) {
+          document.querySelector(".errorAsunto").innerHTML =
+            "Asunto es requerido";
+          datosValidados = false;
+        } else {
+          document.querySelector(".errorAsunto").innerHTML =
+            "Asunto ingresado correctamente";
+          document.querySelector(".errorAsunto").style.color = "green";
+        }
+
+        // Validamos el mensaje
+        if (validacionDatos.test(mensaje) == false) {
+          document.querySelector(".errorMensaje").innerHTML =
+            "Mensaje es requerido";
+          datosValidados = false;
+        } else {
+          document.querySelector(".errorMensaje").innerHTML =
+            "Mensaje ingresado correctamente";
+          document.querySelector(".errorMensaje").style.color = "green";
+        }
+
+        return datosValidados;
+      }
+
+      function limpiarErrores() {
+        document.querySelector(".errorNombre").innerHTML = "";
+        document.querySelector(".errorAsunto").innerHTML = "";
+        document.querySelector(".errorMensaje").innerHTML = "";
+      }
+
+      function exito() {
+        document.querySelector(".resultado").innerHTML =
+          "Mensaje enviado exitosamente|";
+      }
+    </script>
+  </body>
+</html>
