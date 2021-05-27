@@ -1,5 +1,3 @@
-console.log("hola");
-
 $(document).ready(function () {
   $("form").submit(function (event) {
     event.preventDefault();
@@ -12,6 +10,7 @@ $(document).ready(function () {
         let nombre = data.name;
         let imagen = data.sprites.other;
         let { "official-artwork": foto } = imagen;
+        console.log(foto.front_default);
         let peso = data.weight;
 
         $("#pokeInfo").html(
