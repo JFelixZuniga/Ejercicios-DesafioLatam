@@ -10,15 +10,15 @@ $(document).ready(function () {
       url: "https://pokeapi.co/api/v2/pokemon/" + valueInput,
       success: function (data) {
         let nombre = data.name;
-        let imagen = data.sprites.other.dream_world.front_default;
+        let imagen = data.sprites.other;
+        let { "official-artwork": foto } = imagen;
         let peso = data.weight;
-        console.log(data);
 
         $("#pokeInfo").html(
           `
           <div class="text-center">
             <h3 class="text-uppercase pb-3">${nombre}</h3>
-            <img src="${imagen}" alt="${nombre}" height="150">
+            <img src="${foto.front_default}" alt="${nombre}" height="150">
             <h6 class="pt-3">Peso: ${peso}</h6>
           </div>
           `
