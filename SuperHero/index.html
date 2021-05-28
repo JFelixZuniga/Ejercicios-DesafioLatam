@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuentra tu SuperHero</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css"
+      integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row py-3">
+        <img src="./assets/img/sh2.jpg" alt="Super Herp" height="70" />
+        <h1 class="my-auto">
+          Super<span class="font-weight-bold text-primary">Hero</span>
+        </h1>
+        <img
+          src="./assets/img/logo.png"
+          height="50"
+          alt="Logo"
+          class="ml-auto my-auto d-none d-sm-block"
+        />
+      </div>
+    </div>
+
+    <div class="container py-2" id="mensajeError">
+      <div class="input-group">
+        <input
+          id="input-hero"
+          type="text"
+          class="form-control col-12 col-lg-auto"
+          placeholder="Ingresa el ID de tu Héroe"
+          aria-label="Recipient's username with two button addons"
+          aria-describedby="button-addon4"
+        />
+        <div
+          class="
+            col-12 col-lg-4
+            pt-3 pt-lg-0
+            d-inline-flex
+            justify-content-center
+          "
+          id="button-addon4"
+        >
+          <button
+            id="btn-buscar"
+            class="btn btn-outline-success mr-1"
+            type="button"
+          >
+            Buscar Héroe
+          </button>
+          <button
+            id="btn-random"
+            class="btn btn-outline-primary ml-1"
+            type="button"
+          >
+            Héroe al Azar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-12 col-lg-7" id="contenedor-tarjeta">
+          <div class="card mb-3" id="tarjeta">
+            <div class="row no-gutters">
+              <div class="col-12 col-md-5" id="hero-img"></div>
+              <div class="col-12 col-md-7">
+                <div class="card-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 pb-5" id="grafico"></div>
+      </div>
+    </div>
+
+    <!-- JQuery y Bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
