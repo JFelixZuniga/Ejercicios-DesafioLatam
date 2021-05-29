@@ -1,10 +1,12 @@
 body {
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23bbe6ff' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url(../img/fondo.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 5000px 500px rgba(255, 255, 255, 0.75);
 }
-
-#tarjeta {
-  overflow: hidden;
+header {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 #hero-img {
   background-position: center;
@@ -26,4 +28,7 @@ body {
 }
 .font-italic > span {
   font-style: normal;
+}
+footer p {
+  color: #c3c3c3;
 }

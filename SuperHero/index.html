@@ -15,73 +15,84 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row py-3">
-        <img src="./assets/img/sh2.jpg" alt="Super Herp" height="70" />
-        <h1 class="my-auto">
-          Super<span class="font-weight-bold text-primary">Hero</span>
-        </h1>
-        <img
-          src="./assets/img/logo.png"
-          height="50"
-          alt="Logo"
-          class="ml-auto my-auto d-none d-sm-block"
-        />
-      </div>
-    </div>
-
-    <div class="container py-2" id="mensajeError">
-      <div class="input-group">
-        <input
-          id="input-hero"
-          type="text"
-          class="form-control col-12 col-lg-auto"
-          placeholder="Ingresa el ID de tu Héroe"
-          aria-label="Recipient's username with two button addons"
-          aria-describedby="button-addon4"
-        />
-        <div
-          class="
-            col-12 col-lg-4
-            pt-3 pt-lg-0
-            d-inline-flex
-            justify-content-center
-          "
-          id="button-addon4"
-        >
-          <button
-            id="btn-buscar"
-            class="btn btn-outline-success mr-1"
-            type="button"
-          >
-            Buscar Héroe
-          </button>
-          <button
-            id="btn-random"
-            class="btn btn-outline-primary ml-1"
-            type="button"
-          >
-            Héroe al Azar
-          </button>
+    <header class="w-100">
+      <div class="container">
+        <div class="row py-1 mb-3">
+          <img src="./assets/img/sh2.jpg" alt="Super Herp" height="70" />
+          <h1 class="my-auto">
+            Super<span class="font-weight-bold text-primary">Hero</span>
+          </h1>
+          <img
+            src="./assets/img/logo.png"
+            height="50"
+            alt="Logo"
+            class="ml-auto my-auto d-none d-sm-block"
+          />
         </div>
       </div>
-    </div>
+    </header>
 
-    <div class="container pt-5">
-      <div class="row">
-        <div class="col-12 col-lg-7" id="contenedor-tarjeta">
-          <div class="card mb-3" id="tarjeta">
-            <div class="row no-gutters">
-              <div class="col-12 col-md-5" id="hero-img"></div>
-              <div class="col-12 col-md-7">
-                <div class="card-body"></div>
+    <main>
+      <div class="container py-2" id="mensajeError">
+        <div class="input-group">
+          <input
+            id="input-hero"
+            type="number"
+            class="form-control col-12 col-lg-auto"
+            placeholder="Ingresa el ID de tu Héroe"
+            aria-label="Recipient's username with two button addons"
+            aria-describedby="button-addon4"
+          />
+          <div
+            class="
+              col-12 col-lg-4
+              pt-3 pt-lg-0
+              d-inline-flex
+              justify-content-center
+            "
+            id="button-addon4"
+          >
+            <button
+              id="btn-buscar"
+              class="btn btn-outline-success mr-1"
+              type="button"
+            >
+              Buscar Héroe
+            </button>
+            <button
+              id="btn-random"
+              class="btn btn-outline-primary ml-1"
+              type="button"
+            >
+              Héroe al Azar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-12 col-lg-7" id="contenedor-tarjeta">
+            <div class="card mb-3 overflow-hidden">
+              <div class="row no-gutters">
+                <div class="col-12 col-md-5" id="hero-img"></div>
+                <div class="col-12 col-md-7">
+                  <div class="card-body"></div>
+                </div>
               </div>
             </div>
           </div>
+          <div
+            class="col-12 col-lg-5 pb- mt-3 mt-lg-0 my-lg-auto"
+            id="grafico"
+          ></div>
         </div>
-        <div class="col-12 col-lg-5 pb-5" id="grafico"></div>
       </div>
-    </div>
+    </main>
+
+    <footer class="w-100 bg-dark text-center mt-5 py-3">
+      <p class="m-0">Copyright&copy; 2021 - Diseñado con ❤ por JFZuniga</p>
+    </footer>
 
     <!-- JQuery y Bootstrap -->
     <script
