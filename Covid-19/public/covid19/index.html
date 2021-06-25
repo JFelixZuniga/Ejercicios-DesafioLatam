@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hito 1 - Situación Mundial</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/journal/bootstrap.min.css"
+      integrity="undefined"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <h1 class="my-auto">
+          <img
+            src="./assets/img/virus.png"
+            alt="Covid19"
+            class="img-fluid"
+            width="70"
+          />
+          Covid-<span class="font-weight-bold text-primary">19</span>
+        </h1>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto text-dark">
+            <li class="nav-item text-dark">
+              <a
+                class="nav-link text-dark btn btn-outline-warning mx-1"
+                href="#"
+                style="display: none"
+                id="home"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark btn btn-outline-warning mx-1"
+                href="#"
+                style="display: none"
+                id="situacionChile"
+                >Situación Chile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark btn btn-outline-warning"
+                href="#"
+                id="logout"
+                style="display: none"
+                >Cerrar Sesión</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark btn btn-outline-warning"
+                href="#"
+                data-toggle="modal"
+                data-target="#loginModal"
+                id="login"
+                >Iniciar Sesión</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-5" style="display: none" id="contenidoChileMain">
+      <h1 class="text-dark text-center">
+        Situación nacional de Covid-<span class="font-weight-bold text-primary"
+          >19</span
+        >
+        en Chile
+      </h1>
+      <div class="d-flex justify-content-center mt-5">
+        <div id="spinner" class="spinner-border text-warning" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div id="graficoChile" class="py-5">
+        <canvas id="myChartChile"></canvas>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Correo electrónico</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  value="Sincere@april.biz"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  value="secret"
+                />
+              </div>
+              <button class="btn btn-primary" id="btnSubmit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pt-3" id="mensajeLogin"></div>
+
+    <div class="container px-0 py-3" id="contenidoGenealMain">
+      <!-- <div class="alert alert-success alert-dismissible fade show">
+        Iniciaste sesión satisfactoriamente. Ahora puedes revisar la
+        <strong>situación particular de Chile</strong>.
+      </div> -->
+      <h1 class="text-dark text-center">
+        Paises con mayor número de casos activos
+      </h1>
+
+      <div id="grafico" class="py-5">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <table class="table table-striped mt-5 pb-5" id="tablaMain">
+        <thead class="thead-dark sticky-top">
+          <tr>
+            <th scope="col" id="pais" class="pointer">País</th>
+            <th scope="col" id="activos" class="pointer">Casos activos</th>
+            <th scope="col" id="confirmados" class="pointer">Confirmados</th>
+            <th scope="col" id="muertos" class="pointer">Muertos</th>
+            <th scope="col" id="recuperados" class="pointer">Recuperados</th>
+            <th scope="col">Detalle</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Gtáfico de datos Covid-19
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="grafico-por-pais">
+              <canvas id="myChartIndividual"></canvas>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JQuery y Bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Chart.js  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"
+    ></script>
+
+    <script src="./assets/scripts.js"></script>
+  </body>
+</html>
