@@ -1,0 +1,43 @@
+<div class="py-2 w-50 mx-auto">
+  <div class="card-deck row">
+    {{#each productos}}
+      <div class="col-md-6 col-lg-4">
+        <div class="card my-3" onclick="agregarProducto('{{this}}')">
+          <img
+            src="/img/{{this}}.png"
+            class="card-img-top img-thumbnail"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center text-capitalize">{{this}}</h5>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<style>
+  .card-img-top:hover { opacity: 0.7; cursor: pointer; border: 3px solid green;
+  transform: scale(1.1); transition: 0.4s;}
+</style>
+
+<script>
+  let carrito;
+
+  function agregarProducto(producto){
+    console.log("Click!", producto)
+
+    if (localStorage.getItem('productos') == null) {
+      carrito = []
+      carrito.push(producto)
+      return localStorage.setItem('productos', carrito);
+    } else {
+      carrito = localStorage.getItem("productos").split(",")
+      carrito.push(producto)
+      return localStorage.setItem('productos', carrito);
+    }
+
+    console.log("Log de carrito ", carrito)
+
+  }
+</script>
