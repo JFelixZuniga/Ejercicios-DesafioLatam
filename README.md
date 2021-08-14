@@ -38,4 +38,4 @@
 | **Banco Solar**                          | Servidor con Node + paquete pg (PostgreSQL)           | [Ver Código](https://github.com/JFelixZuniga/Ejercicios-DesafioLatam/tree/gh-pages/banco_solar)   | npm i -> nodemon app.js                                                            |
 | Módulo de Express                        |                                                       |                                                                                                   |                                                                                    |
 | **Mercado Web**                          | Express + Handlebars                                  | [Ver Código](https://github.com/JFelixZuniga/Ejercicios-DesafioLatam/tree/gh-pages/Mercado-Web)   | npm i -> nodemon app.js                                                            |
-
+| **Gestión de Curso**                     | Express + pg (postgreSQL)                             | [Ver Código](https://github.com/JFelixZuniga/Ejercicios-DesafioLatam/tree/gh-pages/Gestion_Curso) | npm i -> nodemon app.js                                                            |
